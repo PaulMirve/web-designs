@@ -1,0 +1,47 @@
+.testimonial{
+    height: 82vh;
+    background-color: $color-primary;
+    color: $color-primary-light;
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+    justify-items: center;
+    align-items: center;
+    &__container{
+        grid-column: 2/ 3;
+        margin: 0 auto;
+        display: flex;
+        width: 100rem;
+        align-items: center;
+    }
+
+    &__img{
+        width: 24rem;
+        height: 24rem;
+        border-radius: 50%;
+        margin-right: 10rem;
+    }
+
+    &__text-box{
+        position: z;
+    }
+
+    &__text{
+        font-size: 2.4rem;
+    }
+
+    // &__text::after,
+    // &__text::before{
+    //     content: "\0022";
+    //     font-size: 14rem;
+    //     position: absolute;
+    // }
+
+    &__name{
+        margin-top: 4rem;
+        font-size: 3rem;
+    }
+
+    &__title{
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,39 @@
+.service {
+    background-color: $color-secondary;
+    border-radius: 3px;
+    padding: 2rem;
+    text-align: center;
+
+    &__pentagon {
+        position: relative;
+        background: $color-primary;
+        clip-path: polygon(0 0, 100% 0%, 100% 70%, 50% 100%, 0 70%);
+        height: 20vh;
+    }
+
+    &__icon-box {
+        background-color: $color-secondary;
+        padding: 2rem;
+        border-radius: 3px;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+    }
+
+    &__icon {
+        width: 5rem;
+    }
+
+    &__heading {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    &__text {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+}

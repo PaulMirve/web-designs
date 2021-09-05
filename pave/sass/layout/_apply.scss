@@ -1,0 +1,26 @@
+.apply {
+    background-color: $color-secondary;
+    color: $color-secondary-dark;
+    height: 42rem;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        margin: 0 auto;
+    }
+
+    &__input {
+        margin-right: 4rem;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $color-secondary-dark;
+        outline: none;
+        font-size: 1.8rem;
+        padding: 1rem 0;
+        width: 35rem;
+    }
+
+    &__disclaimer {
+        color: $color-secondary-dark;
+    }
+}

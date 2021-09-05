@@ -1,0 +1,29 @@
+.brands {
+    padding: 2rem 25vw;
+    
+    @include respond(tab-port){
+        padding: 2rem 2vw;
+    }
+
+    &__grid {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 3rem;
+    }
+
+    &__icon {
+        width: 8rem;
+    }
+
+    &__text-box {
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 3rem;
+    }
+}

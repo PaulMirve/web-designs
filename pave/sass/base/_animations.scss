@@ -1,0 +1,65 @@
+@keyframes fadeFromRightToLeft {
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide-list {
+    @for $i from 1 through 5 {
+        li:nth-child(#{$i}) {
+            animation: fadeFromRightToLeft ease ($i * 0.5) * 1s;
+        }
+    }
+}
+
+.fade-in {
+    & {
+        opacity: 0;
+        transition: opacity 1s ease-in;
+    }
+    &--fast {
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+
+    &.appear {
+        opacity: 1;
+    }
+}
+
+.slide {
+    opacity: 0;
+    transition: all 0.8s;
+    &.appear {
+        opacity: 1;
+    }
+    &-from-down {
+        transform: translateY(50%);
+    }
+
+    &-from-top {
+        transform: translateY(-50%);
+    }
+
+    &-from-left {
+        transform: translateX(-50%);
+    }
+
+    &-from-right {
+        transform: translateX(50%);
+    }
+
+    &-from-left.appear,
+    &-from-right.appear {
+        transform: translateX(0);
+    }
+
+    &-from-down.appear,
+    &-from-top.appear {
+        transform: translateY(0);
+    }
+}

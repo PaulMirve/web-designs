@@ -1,0 +1,14 @@
+.team {
+    text-align: center;
+    padding: 10rem 15vw;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        @include respond(tab-port) {
+            grid-template-columns: none;
+        }
+    }
+}

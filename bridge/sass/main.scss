@@ -1,0 +1,29 @@
+@import "abstract/functions";
+@import "abstract/mixins";
+@import "abstract/variables";
+
+@import "base/base.scss";
+@import "base/animations.scss";
+@import "base/typography.scss";
+@import "base/utilities.scss";
+
+@import "layout/heading";
+@import "layout/what-we-do";
+@import "layout/people";
+@import "layout/works";
+@import "layout/services";
+@import "layout/stats";
+@import "layout/team";
+@import "layout/pricing";
+@import "layout/brands";
+@import "layout/lets-talk";
+@import "layout/photo-belt";
+@import "layout/footer";
+
+@import "components/button";
+@import "components/activity-card";
+@import "components/service";
+@import "components/stat";
+@import "components/team-card";
+
+@import "pages/home";

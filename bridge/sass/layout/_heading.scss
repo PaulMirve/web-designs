@@ -1,0 +1,132 @@
+.heading {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 7rem 1fr;
+
+    @include respond(tab-port){
+        grid-template-columns: none;
+    }
+
+    &__navbar {
+        grid-column: 1 / -1;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 3rem;
+        background-color: white;
+
+        &-menu {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            text-align: end;
+            text-transform: uppercase;
+            font-weight: 700;
+            cursor: pointer;
+            justify-self: end;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-radius: 3px;
+            &:hover {
+                background-color: $color-primary;
+            }
+            img {
+                width: 2rem;
+            }
+        }
+
+        &__navigation {
+            display: flex;
+        }
+
+        &__button {
+            margin-right: 10px;
+            border: none;
+            outline: none;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 3px;
+            background-color: $color-primary;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-secondary;
+            }
+
+            &__icon {
+                height: 20px;
+            }
+        }
+
+        &__icon {
+            height: 4rem;
+            width: 4rem;
+            cursor: pointer;
+        }
+
+        &__form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 60%;
+
+            @include respond(tab-port){
+                display: none;
+            }
+
+            &-input {
+                transition: all 0.2s ease;
+                width: 90%;
+                border: none;
+                outline: none;
+                height: 4rem;
+                background-color: $color-secondary;
+                border-radius: 3px;
+                font-size: 1.6rem;
+                padding: 1rem 2rem;
+                margin-right: -3.5rem;
+                &::placeholder {
+                    font-weight: 700;
+                    color: black;
+                }
+
+                &:focus {
+                    width: 100%;
+                }
+            }
+
+            &-icon {
+                height: 2rem;
+            }
+        }
+
+        &__icon {
+            justify-self: center;
+        }
+    }
+
+    &__content {
+        align-self: center;
+        padding-left: 10vw;
+        @include respond(tab-port){
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+    }
+
+    &__text {
+        font-size: 2.6rem;
+    }
+    &__img {
+        align-self: center;
+        justify-self: center;
+        width: 60%;
+        padding: 10vh 0;
+
+        @include respond(tab-port){
+            display: none;
+        }
+    }
+}

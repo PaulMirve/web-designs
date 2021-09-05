@@ -1,0 +1,98 @@
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: black;
+    color: $color-secondary;
+    padding: 5rem 12vw;
+    align-items: center;
+
+    @include respond(tab-port) {
+        grid-template-columns: none;
+        grid-template-rows: none;
+        text-align: center;
+    }
+
+    &__contact-us {
+        text-align: center;
+        grid-column: 1 / -1;
+    }
+
+    &__disclaimers {
+        grid-column: 1 / 2;
+        grid-template-rows: 2 / 3;
+        font-size: 1.6rem;
+
+        a {
+            color: $color-secondary;
+        }
+    }
+
+    &__heading {
+        font-size: 1.4rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+
+    &__logo {
+        width: 6rem;
+        margin-top: 2rem;
+    }
+
+    &__links {
+        justify-self: end;
+    }
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        gap: 2rem;
+        font-size: 1.8rem;
+
+        @include respond(tab-port) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__link {
+        cursor: pointer;
+        &:hover {
+            color: $color-tertiary;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        @include respond(tab-port) {
+            justify-content: center;
+        }
+    }
+
+    &__social-button {
+        padding: 1rem;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        background-color: $color-tertiary;
+
+        &:hover {
+            background-color: $color-tertiary-light;
+        }
+    }
+
+    &__social-icon {
+        width: 2rem;
+        height: 2rem;
+        filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+    }
+
+    &__divisor {
+        border: 0;
+        border-bottom: 1px solid $color-primary;
+    }
+}

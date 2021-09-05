@@ -1,0 +1,8 @@
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include respond(tab-port) {
+        grid-template-columns: none;
+    }
+}

@@ -1,0 +1,39 @@
+.footer {
+    background-color: $color-secondary-dark;
+    color: $color-grey-light;
+    padding: 5rem 40rem;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__logo {
+        margin-left: 6rem;
+    }
+
+    &__disclaimer {
+        margin-left: 15rem;
+
+        & a{
+            color: $color-grey-light;
+        }
+    }
+
+    &__list {
+        text-align: center;
+        margin-right: auto;
+        list-style-type: none;
+
+        &-item {
+            display: inline-block;
+        }
+
+        &-item:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+    &__content-container {
+        display: flex;
+        align-items: center;
+    }
+}

@@ -1,0 +1,42 @@
+.btn {
+    border: none;
+    font-size: 1.6rem;
+    padding: 1.5rem 4rem;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+
+    &:hover {
+        transform: translateY(-0.7rem);
+    }
+
+    &:active {
+        transform: translateY(-0.5rem);
+    }
+
+    &__icon {
+        width: 2rem;
+        margin-left: 1rem;
+    }
+
+    &--dark {
+        background-color: black;
+        color: $color-secondary;
+    }
+
+    &--light {
+        background-color: $color-secondary;
+    }
+
+    &--grey{
+        background-color: $color-primary;
+    }
+
+    &--small{
+        padding: 1rem 2rem;
+    }
+}

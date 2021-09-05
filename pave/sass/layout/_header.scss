@@ -1,0 +1,97 @@
+.header {
+    background-color: $color-primary;
+    color: $color-primary-light;
+    height: 90rem;
+    display: grid;
+    grid-template-columns: 3fr 1.8fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 6rem;
+
+    @include respond(tab-port) {
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    &__logo {
+        padding: 0 30rem;
+        margin-top: 5rem;
+
+        @include respond(tab-port) {
+            padding: 0;
+            margin: 0 10rem;
+        }
+    }
+
+    &__nav {
+        grid-column: 1 / -1;
+    }
+
+    &__content-block {
+        padding: 5rem 10rem 0 30rem;
+
+        @include respond(tab-port) {
+            padding: 0 1rem;
+            padding: 0 4rem;
+        }
+    }
+
+    &__img-block {
+        align-self: end;
+        justify-self: start;
+
+        @include respond(tab-port) {
+            align-self: center;
+            justify-self: center;
+            padding: 4rem;
+        }
+    }
+
+    &__img {
+        width: 50rem;
+    }
+
+    &__text {
+        font-size: 2.4rem;
+        @include respond(tab-port) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__input {
+        border: none;
+        &--text {
+            width: 60%;
+            height: 4.9rem;
+            border: none;
+            outline: none;
+            padding: 0 2.5rem;
+            border-radius: 0.5rem 0 0 0.5rem;
+            font-size: 1.6rem;
+        }
+        &--button {
+            background-color: $color-primary-light;
+            color: white;
+            position: relative;
+            border-radius: 0 0.5rem 0.5rem 0;
+            width: 15rem;
+            height: 5rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            left: -0.5rem;
+            font-weight: 700;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &__input:focus,
+    &__input:active {
+        outline-width: 0;
+    }
+
+    &__disclaimer {
+        color: white;
+    }
+}

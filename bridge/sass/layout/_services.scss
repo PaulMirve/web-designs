@@ -1,0 +1,24 @@
+.services {
+    padding: 7rem 18vw 10rem 18vw;
+    background-color: $color-primary;
+    text-align: center;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        @include respond(tab-port){
+            grid-template-columns: none;
+        }
+    }
+
+    &__footing {
+        margin-top: 3rem;
+        font-size: 1.6rem;
+
+        a {
+            font-weight: 700;
+            color: black;
+        }
+    }
+}

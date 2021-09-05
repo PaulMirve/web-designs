@@ -1,0 +1,32 @@
+.btn {
+    &--primary {
+        width: 22rem;
+        border: 1px solid $color-secondary-dark;
+        background-color: $color-secondary-dark;
+        color: $color-grey-light;
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: transparent;
+            color: $color-secondary-dark;
+        }
+    }
+
+    &--secondary {
+        border: 2px solid $color-secondary-dark;
+        border-radius: 0.3rem;
+        background-color: transparent;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        padding: 1rem 3rem;
+        font-weight: 600;
+        transition: all .2s;
+
+        &:hover{
+            background-color: $color-secondary-dark;
+            color: $color-grey-light;
+        }
+    }
+}
