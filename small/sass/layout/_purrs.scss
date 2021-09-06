@@ -1,0 +1,28 @@
+.purrs {
+    background-color: $color-blue;
+    padding: 8rem 10vw;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8vw;
+
+        @include respond(tab-port) {
+            grid-template-columns: none;
+            text-align: center;
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        border: 2px solid black;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+    }
+}

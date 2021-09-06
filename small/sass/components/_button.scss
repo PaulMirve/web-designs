@@ -1,0 +1,15 @@
+.btn{
+    padding: 1.5rem 5rem;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+
+    &--yellow{
+        color: black;
+        background-color: $color-tertiary;
+    }
+}

@@ -1,0 +1,32 @@
+.header {
+    background-image: url(../../img/cat-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 95vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 6rem 1fr;
+
+    @include respond(tab-port) {
+        grid-template-columns: none;
+    }
+
+    &__nav {
+        grid-column: 1 / -1;
+
+        @include respond(tab-port) {
+            grid-column: auto;
+        }
+    }
+    &__main {
+        grid-row: 2 /3;
+        align-self: center;
+        padding: 0 5vw 0 16vw;
+
+        @include respond(tab-port) {
+            padding: 0 3rem;
+            text-align: center;
+        }
+    }
+}

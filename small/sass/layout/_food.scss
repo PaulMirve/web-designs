@@ -1,0 +1,20 @@
+.food {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $color-secondary-2;
+    padding: 8rem 10vw 4rem 10vw;
+    justify-items: center;
+
+    @include respond(tab-port) {
+        grid-template-columns: none;
+        text-align: center;
+    }
+
+    &__photo {
+        width: 80%;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+}

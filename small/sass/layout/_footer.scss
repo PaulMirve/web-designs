@@ -1,0 +1,58 @@
+.footer {
+    border-top: 2px solid black;
+
+    &__line {
+        border-bottom: 2px solid black;
+        height: 4rem;
+    }
+
+    &__main {
+        padding: 4rem 8vw;
+        display: flex;
+        justify-content: space-around;
+
+        @include respond(tab-port) {
+            flex-direction: column-reverse;
+            justify-content: start;
+
+            & > * {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__end {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 4rem;
+        padding: 4rem 8vw;
+
+        @include respond(tab-port) {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            & > * {
+                margin-top: 2rem;
+            }
+        }
+
+        &-disclaimers {
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: flex;
+            gap: 2rem;
+        }
+
+        &-socials {
+            display: flex;
+            gap: 2.5rem;
+            &-icon {
+                width: 2rem;
+            }
+        }
+
+        &-logo {
+            width: 4rem;
+        }
+    }
+}

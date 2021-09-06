@@ -1,0 +1,42 @@
+.ingredients {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 8rem;
+    padding: 8rem 4vw;
+
+    &--brown{
+        background-color: $color-primary;
+    }
+
+    @include respond(tab-port) {
+        grid-template-columns: none;
+        text-align: center;
+    }
+
+    &__main {
+    }
+
+    &__photos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8rem;
+
+        @include respond(tab-port) {
+            grid-template-columns: none;
+        }
+    }
+
+    &__link {
+        margin-top: 1rem;
+        display: inline-block;
+        font-size: 1.6rem;
+        color: black;
+        font-weight: 500;
+    }
+
+    &__photo {
+        width: 100%;
+        border: 2px solid black;
+        margin-bottom: 2rem;
+    }
+}
