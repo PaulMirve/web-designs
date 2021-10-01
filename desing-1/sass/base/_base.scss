@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //This defines what one rem is
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $color-dark;
+}
+
+main {
+    padding: 0 10vw;
+
+    @include respond(phone) {
+        padding: 0 2vw;
+    }
+}
+
+section:not(:first-child) {
+    margin: 10rem 0;
+}
