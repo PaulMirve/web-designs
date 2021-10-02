@@ -1,0 +1,41 @@
+.header {
+    display: grid;
+    background-color: $color-white;
+    place-items: center;
+    height: 92vh;
+    clip-path: ellipse(100% 50% at 50% 40%);
+
+    &__container {
+        padding: 0 20vw;
+        align-self: center;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__icon {
+        fill: $color-primary;
+        width: 3rem;
+        height: 3rem;
+        transition: fill 0.2s ease-in;
+
+        &:hover {
+            fill: $color-dark;
+        }
+    }
+
+    &__links {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: flex-end;
+        padding: 1rem;
+
+        & a {
+            line-height: 0;
+            margin: 0;
+        }
+    }
+}

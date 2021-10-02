@@ -1,0 +1,56 @@
+.navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 4rem;
+
+    &:hover &__socials {
+        margin-left: 0;
+    }
+
+    &:hover &__links {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__socials {
+        width: 10%;
+        display: flex;
+        gap: 1rem;
+        transition: margin-left 0.5s linear;
+    }
+
+    &__icon {
+        fill: $color-primary;
+        width: 3rem;
+        height: 3rem;
+        transition: fill 0.2s ease-in;
+
+        &:hover {
+            fill: $color-dark;
+        }
+    }
+
+    &__links {
+        display: flex;
+        gap: 1rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+        margin-left: calc(100% - (11rem + 14.3rem));
+        
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 2.4rem;
+        color: $color-primary;
+    }
+
+    & a {
+        line-height: 0;
+        margin: 0;
+        text-decoration: none;
+    }
+}
