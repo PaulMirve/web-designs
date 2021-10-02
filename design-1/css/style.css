@@ -86,7 +86,7 @@ b {
 
 .card {
   border: 3px solid #4069ee;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,6 +94,7 @@ b {
 .card--small {
   padding: 2em 1em;
   text-align: center;
+  font-size: 1.8rem;
 }
 .card--small > svg {
   fill: #4069ee;
@@ -145,6 +146,14 @@ b {
     grid-template-rows: auto 1fr;
   }
 }
+.project--left .project__frame {
+  grid-column: 5/12;
+  grid-row: 1/2;
+}
+.project--left .project__content {
+  grid-column: 2/6;
+  grid-row: 1/2;
+}
 .project__frame {
   grid-column: 2/9;
   grid-row: 1/2;
@@ -179,6 +188,9 @@ b {
   height: 100%;
   border-radius: 5px;
   object-fit: cover;
+}
+.project--left .project__frame::after {
+  transform-origin: right;
 }
 .project__frame:hover .project__preview {
   opacity: 1;
@@ -308,6 +320,74 @@ b {
   outline: none;
 }
 
+.job__title {
+  font-size: 2.8rem;
+}
+.job__activities {
+  list-style-type: none;
+  font-size: 1.6rem;
+}
+.job__activities > div:not(:first-child) {
+  margin-top: 2rem;
+}
+.job__activities > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.5rem;
+}
+.job__activities > div svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #4069ee;
+}
+
+.horizontal-menu {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-left: 1px solid #8892b0;
+}
+@media (max-width: 56.25em) {
+  .horizontal-menu {
+    flex-direction: row;
+    border-left: none;
+    border-bottom: 1px solid #8892b0;
+    justify-content: center;
+  }
+}
+.horizontal-menu > button {
+  background-color: transparent;
+  border: none;
+  color: #8892b0;
+  font-weight: 300;
+  font-size: 2.4rem;
+  cursor: pointer;
+  position: relative;
+  padding: 0.5em 1em;
+}
+.horizontal-menu__btn.active {
+  color: #4069ee;
+}
+.horizontal-menu__btn.active::before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: #4069ee;
+  position: absolute;
+  top: 0;
+  left: -3px;
+}
+@media (max-width: 56.25em) {
+  .horizontal-menu__btn.active::before {
+    left: 0;
+    top: 97%;
+    width: 100%;
+    height: 5px;
+  }
+}
+
 .header {
   display: grid;
   place-items: center;
@@ -370,6 +450,34 @@ b {
   display: grid;
   gap: 2rem 4rem;
   grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+}
+
+.footer {
+  background-color: #161a1d;
+  font-size: 1.2rem;
+  padding: 4em;
+}
+
+.projects > div {
+  margin-top: 8rem;
+}
+
+.jobs {
+  display: grid;
+  justify-items: center;
+}
+.jobs__layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  width: 60%;
+}
+@media (max-width: 56.25em) {
+  .jobs__layout {
+    grid-template-columns: 1fr;
+    width: 90%;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

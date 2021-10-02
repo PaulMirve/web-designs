@@ -8,6 +8,16 @@
         grid-template-rows: auto 1fr;
     }
 
+    &--left &__frame{
+        grid-column: 5 / 12;
+        grid-row: 1 /2;
+    }
+
+    &--left &__content{
+        grid-column: 2 / 6;
+        grid-row: 1 / 2;
+    }
+
     &__frame {
         grid-column: 2 / 9;
         grid-row: 1 /2;
@@ -27,6 +37,7 @@
             transform-origin: top left;
             transition: transform 0.2s ease-in;
         }
+        
 
         &:hover{
             &::after{
@@ -45,6 +56,10 @@
             border-radius: 5px;
             object-fit: cover;
         }
+    }
+
+    &--left &__frame::after{
+        transform-origin: right;
     }
 
     &__frame:hover &__preview{
