@@ -15,14 +15,25 @@
 </head>
 
 <body>
-    <header class="header">
+    <nav class="navbar">
+        <div class="navbar__links">
+              <a href="#header" class="navbar__link">About me</a>
+              <a href="#skills" class="navbar__link">Skills</a>
+              <a href="#projects" class="navbar__link">Projects</a>
+              <a href="#jobs" class="navbar__link">Jobs</a>
+              <a href="#socials" class="navbar__link">Socials</a>
+              <a href="#resources" class="navbar__link">Resources</a>
+        </div>
+      
+    </nav>
+    <header id="header" class="header">
         <span>
             <h1 class="heading heading--logo">Paul Miranda</h1>
             <p class="header__subtitle">A <b>fullstack</b> developer with passion for the <b>frontend</b></p>
         </span>
     </header>
     <main>
-        <section class="introduction">
+        <section id="introduction" class="introduction">
             <div class="card">
                 <div class="card__heading">
                     <h3>Frontend developer</h3>
@@ -65,7 +76,7 @@
                 </div>
             </div>
         </section>
-        <section class="skills">
+        <section id="skills" class="skills">
             <h1 class="heading heading--primary tac mb-md">
                 My Skills
             </h1>
@@ -144,12 +155,13 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section id="projects" class="projects">
             <h1 class="heading heading--primary tac mb-md">
                 My personal projects
             </h1>
             <div class="project">
                 <div class="project__frame">
+                    <p class="project__preview">See preview</p>
                     <img src="https://picsum.photos/650/400" alt="Hola">
                 </div>
                 <div class="project__content">
@@ -180,7 +192,7 @@
                 </div>
             </div>
         </section>
-        <section class="socials">
+        <section id="socials" class="socials">
             <h1 class="heading heading--primary tac">
                 Where you can find me
             </h1>

@@ -9,6 +9,7 @@
 html {
     //This defines what one rem is
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -25,5 +26,5 @@ main {
 }
 
 section:not(:first-child) {
-    margin: 10rem 0;
+   padding: 10rem 0;
 }
